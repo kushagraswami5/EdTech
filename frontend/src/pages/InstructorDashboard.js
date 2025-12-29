@@ -6,7 +6,7 @@ export default function InstructorDashboard() {
   const [description, setDescription] = useState("");
 
   const createCourse = async () => {
-    await fetch("http://localhost:5000/api/courses", {
+    await fetch("https://edtech-xdna.onrender.com//api/courses", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -47,3 +47,4 @@ export default function InstructorDashboard() {
     </>
   );
 }
+
