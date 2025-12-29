@@ -23,7 +23,7 @@ export default function StudentDashboard() {
 
   // Fetch progress
   useEffect(() => {
-    fetch("http://localhost:5000/api/progress", {
+    fetch("https://edtech-xdna.onrender.com/api/progress", {
       headers: { Authorization: `Bearer ${token}` },
     })
       .then((res) => res.json())
@@ -39,7 +39,7 @@ export default function StudentDashboard() {
     );
 
   const enroll = async (id) => {
-    await fetch(`http://localhost:5000/api/courses/${id}/enroll`, {
+    await fetch(`https://edtech-xdna.onrender.com/api/courses/${id}/enroll`, {
       method: "POST",
       headers: { Authorization: `Bearer ${token}` },
     });
@@ -54,7 +54,7 @@ export default function StudentDashboard() {
   };
 
   const markCompleted = async (id) => {
-    await fetch(`http://localhost:5000/api/progress/${id}/complete`, {
+    await fetch(`https://edtech-xdna.onrender.com/api/progress/${id}/complete`, {
       method: "POST",
       headers: { Authorization: `Bearer ${token}` },
     });
@@ -137,5 +137,6 @@ export default function StudentDashboard() {
     </>
   );
 }
+
 
 
