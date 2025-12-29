@@ -11,7 +11,7 @@ export default function StudentDashboard() {
 
   // Fetch courses
   useEffect(() => {
-    fetch("https://edtech-xdna.onrender.com//api/courses", {
+    fetch("https://edtech-xdna.onrender.com/api/courses", {
       headers: { Authorization: `Bearer ${token}` },
     })
       .then((res) => res.json())
@@ -137,4 +137,5 @@ export default function StudentDashboard() {
     </>
   );
 }
+
 
